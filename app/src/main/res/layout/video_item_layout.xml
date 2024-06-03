@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_height="230dp"
+    android:layout_width="187dp"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/shape_gradient"
+            android:alpha="0.25"
+            android:layout_alignBottom="@+id/image"/>
+
+        <LinearLayout
+            android:id="@+id/videoDetail"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@id/image">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bofangliang_white"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp" />
+            <TextView
+                android:id="@+id/viewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="1.2万"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/danmushu_white"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:id="@+id/bulletCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="14"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"/>
+            <TextView
+                android:id="@+id/timeSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="1:26"
+                android:textSize="12sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="50dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/videoName"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:maxLines="2"
+            android:layout_below="@+id/image"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:id="@+id/upDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/upzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/upzhux"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"/>
+            <TextView
+                android:id="@+id/upName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三二一"
+                android:textSize="12sp"
+                android:textColor="@color/grey_font"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
