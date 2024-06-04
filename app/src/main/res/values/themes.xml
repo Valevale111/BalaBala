@@ -2,5 +2,8 @@
 <resources>
 
     <style name="Theme.BalaBala" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" />
-    <style name="HideStyle" parent="android:Theme.Light.NoTitleBar.Fullscreen"/>
+
+    <style name="HideStyle" parent="android:Theme.Light.NoTitleBar.Fullscreen" />
+
+    <style name="Theme.AppCompat" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
