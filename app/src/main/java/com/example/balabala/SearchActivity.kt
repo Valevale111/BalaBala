@@ -16,6 +16,8 @@ class SearchActivity : FragmentActivity() {
         backButton.setOnClickListener{
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
+            finish()
+            //销毁搜索activity，释放资源
         }
     }
 }

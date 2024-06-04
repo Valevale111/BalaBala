@@ -1,5 +1,6 @@
 package com.example.balabala
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,11 @@ class VideosAdapter(val videosList:List<Video>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.video_item_layout,parent,false)
-        return ViewHolder(view)
+        val viewHolder =  ViewHolder(view)
+        viewHolder.itemView.setOnClickListener{
+            val intent = Intent(view.context,VideoAvtivity::class.java)
+        }
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
