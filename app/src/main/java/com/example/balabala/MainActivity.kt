@@ -2,25 +2,28 @@ package com.example.balabala
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.ActivityOptionsCompat
+import androidx.core.util.Pair
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : FragmentActivity() {
-    private val tabNames = arrayOf("直播","推荐","热门","动画","影视","MSI","公众科学日","新征程")
+    private val tabNames = arrayOf("音乐" ,"推荐","热门","动画","影视","MSI","公众科学日","新征程")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if(GlobalVariables.page_num!=0) GlobalVariables.page_num=0
         setContentView(R.layout.activity_main)
-        if(GlobalVariables.page_num==0){
-            findViewById<ImageView>(R.id.homeIcon).setImageResource(R.drawable.home_pink)
-        }
+        findViewById<ImageView>(R.id.homeIcon).setImageResource(R.drawable.home_pink)
 
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         //减小page页面缓冲数量
@@ -41,5 +44,19 @@ class MainActivity : FragmentActivity() {
             val intent = Intent(this,SearchActivity::class.java)
             startActivity(intent)
         }
+
+        val meButton:ImageView = findViewById(R.id.meIcon)
+        meButton.setOnClickListener{
+            val intent = Intent(this,MeActivity::class.java)
+            // Create the options for the transition
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                this,
+                Pair(meButton as View, "shared_element_image")
+            )
+
+            // Start ActivityB with the transition
+            startActivity(intent, options.toBundle())
+        }
     }
 }
+

@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.BalaBala" parent="android:Theme.Material.Light.NoActionBar.Fullscreen" />
+    <style name="Theme.BalaBala" parent="Theme.AppCompat.Light.NoActionBar" />
 
-    <style name="HideStyle" parent="android:Theme.Light.NoTitleBar.Fullscreen" />
+    <style name="HideStyle" parent="android:Theme.Light.NoTitleBar.Fullscreen" >
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
 
-    <style name="Theme.AppCompat" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.AppCompat" parent="android:Theme.Material.Light.NoActionBar" >
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TransitionStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/change_bounds_image_transition</item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_bounds_image_transition</item>
+        <item name="android:navigationBarColor">#00000000</item>
+    </style>
 </resources>

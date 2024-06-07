@@ -65,6 +65,7 @@
 
     <include
         layout="@layout/bottom_bar_layout"
+        android:transitionName="shared_element_image"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
 

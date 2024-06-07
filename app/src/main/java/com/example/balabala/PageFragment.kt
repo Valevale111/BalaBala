@@ -20,7 +20,7 @@ class PageFragment():Fragment(),VideosAdapter.OnItemClickListener {
         savedInstanceState: Bundle?
     ): View {
         return when (currentLoc){
-            0 -> inflater.inflate(R.layout.pager_layout_1,container,false)
+            0 -> inflater.inflate(R.layout.pager_layout_music,container,false)
             1 -> inflater.inflate(R.layout.pager_layout_home,container,false)
             2 -> inflater.inflate(R.layout.pager_layout_3,container,false)
             3 -> inflater.inflate(R.layout.pager_layout_4,container,false)
@@ -49,8 +49,9 @@ class PageFragment():Fragment(),VideosAdapter.OnItemClickListener {
         }
     }
 
+    // 页面1的特定逻辑:可滑动音乐列表，可控制播放音乐
     private fun handlePage1Logic() {
-        // 页面1的特定逻辑
+
     }
 
     private val list = ArrayList<Video>()

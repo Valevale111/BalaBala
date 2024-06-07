@@ -2,46 +2,165 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp">
-        <ImageView
+        android:layout_height="56dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/upProfile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/test_pic"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CircleImageView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/upName"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="黑猫厨房"
+            android:textSize="13sp"
+            android:textColor="@color/pink"
+            android:layout_alignTop="@id/upProfile"
+            android:layout_toRightOf="@id/upProfile"
+            android:layout_marginLeft="8dp"/>
+        <TextView
+            android:id="@+id/upFans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="461 万"
+            android:textSize="11sp"
+            android:textColor="@color/grey_font_shallow"
+            android:layout_alignBottom="@id/upProfile"
+            android:layout_alignLeft="@id/upName"/>
+        <TextView
+            android:id="@+id/fansText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="粉丝"
+            android:textSize="11sp"
+            android:textColor="@color/grey_font_shallow"
+            android:layout_toRightOf="@id/upFans"
+            android:layout_alignBottom="@id/upFans"/>
+        <TextView
+            android:id="@+id/upVideoCounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="273"
+            android:textSize="11sp"
+            android:textColor="@color/grey_font_shallow"
+            android:layout_alignBottom="@id/fansText"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/fansText"/>
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text=" 视频"
+            android:textSize="11sp"
+            android:textColor="@color/grey_font_shallow"
+            android:layout_alignBottom="@id/upVideoCounts"
+            android:layout_toRightOf="@id/upVideoCounts"/>
         <TextView
+            android:id="@+id/followButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/follow_button"
+            android:text="+ 关注"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:textColor="@color/white" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="32dp">
-
-
+        android:layout_height="30dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/bofangIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bofangliang_grey"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="3dp"/>
+        <TextView
+            android:id="@+id/videoCounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="69.3 万"
+            android:textColor="@color/grey_font_shallow" />
+        <ImageView
+            android:id="@+id/danmuIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/danmushu_grey"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="3dp"/>
+        <TextView
+            android:id="@+id/bulletCounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="107"
+            android:textColor="@color/grey_font_shallow" />
+        <TextView
+            android:id="@+id/postDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024 年 1 月 18 日 13:55"
+            android:textSize="12sp"
+            android:textColor="@color/grey_font_shallow"
+            android:layout_marginLeft="6dp"/>
+        <ImageView
+            android:id="@+id/duorenIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/duoren"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="4"
+            android:textColor="@color/grey_font_shallow" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 人正在看"
+            android:textSize="12sp"
+            android:textColor="@color/grey_font_shallow" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="32dp">
-    </LinearLayout>
+    <RelativeLayout
+        android:layout_height="64dp"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:src="@color/grey_back"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recommends"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
 
 </LinearLayout>

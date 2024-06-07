@@ -16,8 +16,9 @@
         android:layout_width="wrap_content"
         android:src="@drawable/home"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="5dp"
-        android:clickable="true"/>
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/jia"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
         android:clickable="true"/>
     <ImageView
         android:id="@+id/meIcon"
@@ -41,8 +43,9 @@
         android:src="@drawable/bilibili_line"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="50dp"
-        android:layout_marginTop="5dp"
-        android:clickable="true" />
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
