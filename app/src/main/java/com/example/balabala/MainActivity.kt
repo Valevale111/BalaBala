@@ -3,6 +3,7 @@ package com.example.balabala
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -17,6 +18,9 @@ class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if(GlobalVariables.page_num==0){
+            findViewById<ImageView>(R.id.homeIcon).setImageResource(R.drawable.home_pink)
+        }
 
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         //减小page页面缓冲数量

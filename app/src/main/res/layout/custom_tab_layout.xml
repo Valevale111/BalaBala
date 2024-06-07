@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+        <!-- 左边的两个页面滑动栏（标签） -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:tabMode="scrollable"
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/shape_tab_indicator"
+            app:tabIndicatorColor="@color/pink"
+            app:tabTextColor="@color/grey_font"
+            app:tabSelectedTextColor="@color/pink"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"/>
+
+        <!-- 右边的搜索框 -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="点我发弹幕"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.05dp"
+            android:src="#D6D1D1"
+            android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

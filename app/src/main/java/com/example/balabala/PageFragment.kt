@@ -1,5 +1,6 @@
 package com.example.balabala
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class PageFragment():Fragment() {
+class PageFragment():Fragment(),VideosAdapter.OnItemClickListener {
     companion object{
         var currentLoc = 1
     }
@@ -54,13 +55,20 @@ class PageFragment():Fragment() {
 
     private val list = ArrayList<Video>()
 
+    override fun onItemClick(position: Int) {
+        val intent = Intent(activity,VideoAvtivity::class.java)
+        //通过键值对向VideoActivity传递当前点击的视频项的位置数据
+        intent.putExtra("ITEM_POSITION", position)
+        startActivity(intent)
+    }
+
     // 页面home的特定逻辑
     private fun handlePage2Logic() {
         initVideos(list)
         val context = requireContext()
         val layoutManager = GridLayoutManager(context,2)
         val recyclerView = view?.findViewById<RecyclerView>(R.id.videosLayout)
-        val videosAdapter = VideosAdapter(list)
+        val videosAdapter = VideosAdapter(list,this)
         recyclerView?.adapter = videosAdapter
         recyclerView?.layoutManager = layoutManager
     }

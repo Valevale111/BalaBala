@@ -54,7 +54,7 @@
         app:tabIndicatorColor="@color/pink"
         app:tabTextColor="@color/grey_font"
         app:tabSelectedTextColor="@color/pink"
-        android:theme="@style/Theme.AppCompat"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:layout_weight="1"/>
 
     <androidx.viewpager2.widget.ViewPager2
@@ -63,20 +63,9 @@
         android:layout_height="500dp"
         android:layout_weight="14"/>
 
-    <LinearLayout
-        android:id="@+id/bottonGuide"
+    <include
+        layout="@layout/bottom_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:layout_weight="1.2">
-
-        <ImageView
-             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </LinearLayout>
+        android:layout_height="50dp"/>
 
 </LinearLayout>
